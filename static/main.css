@@ -279,6 +279,44 @@
 
 /* Content Section */
 /* Login Section */
+
+          body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .menu-bar {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .menu-button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .dropdown {
+            display: none; /* Hidden by default */
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            z-index: 1;
+        }
+        
+        .menu-item {
+            display: block;
+            padding: 10px 20px;
+            color: black;
+            text-decoration: none;
+        }
+        
+        .menu-item:hover {
+            background-color: #f1f1f1; /* Change color on hover */
+        }    
 .login-section {
     display: flex;
     align-items: center;
@@ -481,6 +519,32 @@
     background-color: #f1f1f1;
     overflow: hidden;
 }
+
+    .notification {
+      font-size: 24px;
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px;
+    }
+    .notification-content {
+      display: none;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 10px;
+      position: absolute;
+      top: 50px;
+      right: 10px;
+      width: 250px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .notification-item {
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+    .notification-item:last-child {
+      border-bottom: none;
+    }
 
 /* Sidebar */
 .sidebar {

@@ -52,9 +52,13 @@
 
         <div class="container-nav">
             <!-- Left Side: Menu Icon -->
-            <div class="menu-icon">
-                &#9776; <!-- Unicode for menu icon -->
-            </div>
+            <div class="menu-bar">
+              <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
+              <div class="dropdown" id="dropdownMenu">
+                  <a href="signup.html" class="menu-item">Sign Up</a>
+                  <a href="login.html" class="menu-item">Log In</a>
+              </div>
+          </div>
         
             <!-- Center: Title and Subtitle -->
             <div class="title-section">
@@ -117,8 +121,9 @@
               </div>
         
               <div class="form-footer">
-                <button class="submit-button">Create Account</button>
-              </div>
+                <a href="login.html" class="submit-button" style="display: inline-block; padding: 10px 20px; background-color: #28a745; color: white; text-align: center; text-decoration: none; border-radius: 5px;">Create Account</a>
+            </div>
+            
             </div>
           </div>
     

@@ -52,9 +52,13 @@
 
         <div class="container-nav">
             <!-- Left Side: Menu Icon -->
-            <div class="menu-icon">
-                &#9776; <!-- Unicode for menu icon -->
-            </div>
+            <div class="menu-bar">
+              <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
+              <div class="dropdown" id="dropdownMenu">
+                  <a href="signup.html" class="menu-item">Sign Up</a>
+                  <a href="login.html" class="menu-item">Log In</a>
+              </div>
+          </div>
         
             <!-- Center: Title and Subtitle -->
             <div class="title-section">
@@ -67,8 +71,10 @@
                 <div class="availability">2 Bed Availability</div>
                 <div class="calendar">&#128197;</div> <!-- Unicode for calendar icon -->
                 <div class="notification">&#128276;</div> <!-- Unicode for bell icon -->
-                <button class="share-idea">+ Share your idea</button>
-                <div class="profile-circle">MJ</div>
+                <button class="share-idea">
+                  <a href="main.html" style="color: inherit; text-decoration: none;">+ Share your idea</a>
+                </button>
+                <div class="profile-circle">&#128100;</div>
             </div>
         </div>
 
@@ -88,8 +94,6 @@
             </div>
           </main>
         
-    
-    
        <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -128,18 +132,11 @@
             © 2024 Dwell-o. All rights reserved.
         </div>
     </footer>
-    
-    
+
     
         <script src="main.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
-
-
-
-
-
 </body>
 </html>
