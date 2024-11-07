@@ -44,58 +44,56 @@
           rel="stylesheet"
         />
     
-        <link rel="stylesheet" href="main.css" />
+        <link rel="stylesheet" href="{{url_for('static', filename= 'main.css') }}" />
     
         
       </head>
       <body>
 
-    <!-- Toggle Button -->
-    <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div> <!-- Unicode for menu icon -->
-
-    <div class="container">
-        <!-- Sidebar -->
-        <div class="sidebar" id="sidebar">
-            <a href="#">Reserve a Bed</a>
-            <a href="#">Billing/Payment</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">About Us</a>
-            <a href="#" class="logout">Log Out</a>
-        </div>
-
-        <!-- Main Content -->
-        <div class="main" id="main">
-            <!-- Navigation Header -->
-            <div class="container-nav">
-                <!-- Center: Title and Subtitle -->
-                <div class="title-section">
-                    <h1>Dwello</h1>
-                    <p>A Better Way to Dwell</p>
-                </div>
-
-                <!-- Right Side: Action Buttons -->
-                <div class="actions">
-                    <div class="availability">2 Bed Availability</div>
-                    <div class="calendar">&#128197;</div> <!-- Unicode for calendar icon -->
-                    <div class="notification">&#128276;</div> <!-- Unicode for bell icon -->
-                    <button class="share-idea">+ Share your idea</button>
-                    <div class="profile-circle">MJ</div>
-                </div>
+        <div class="container-nav">
+            <!-- Left Side: Menu Icon -->
+            <div class="menu-bar">
+              <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
+              <div class="dropdown" id="dropdownMenu">
+                  <a href="signup.html" class="menu-item">Sign Up</a>
+                  <a href="login.html" class="menu-item">Log In</a>
+              </div>
+          </div>
+        
+            <!-- Center: Title and Subtitle -->
+            <div class="title-section">
+                <h1>Dwell-o</h1>
+                <p>A Better Way to Dwell</p>
             </div>
-
-            <!-- Image Grid -->
-            <div class="image-grid">
-                <div class="image large"></div>
-                <div class="image large"></div>
-                <div class="image small"></div>
-                <div class="image small"></div>
-                <div class="image small"></div>
-                <div class="image small"></div>
+        
+            <!-- Right Side: Action Buttons -->
+            <div class="actions">
+                <div class="availability">2 Bed Availability</div>
+                <div class="calendar">&#128197;</div> <!-- Unicode for calendar icon -->
+                <div class="notification">&#128276;</div> <!-- Unicode for bell icon -->
+                <button class="share-idea">
+                  <a href="main.html" style="color: inherit; text-decoration: none;">+ Share your idea</a>
+                </button>
+                <div class="profile-circle">&#128100;</div>
             </div>
         </div>
-    </div>
 
-    
+        <main class="content">
+            <div class="image-row">
+              <div class="image-card"></div>
+              <div class="image-card"></div>
+              <div class="image-card"></div>
+              <div class="image-card"></div>
+            </div>
+        
+            <div class="text-columns">
+              <div class="text-block"></div>
+              <div class="text-block"></div>
+              <div class="text-column"></div>
+              <div class="text-column"></div>
+            </div>
+          </main>
+        
        <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -134,18 +132,11 @@
             © 2024 Dwell-o. All rights reserved.
         </div>
     </footer>
+
     
-    
-    
-        <script src="main.js"></script>
+        <script src="{{url_for('static', filename= 'main.js') }}"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
-
-
-
-
-
 </body>
 </html>

@@ -3,7 +3,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dwell-o</title>
-    
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,64 +43,82 @@
           rel="stylesheet"
         />
     
-        <link rel="stylesheet" href="main.css" />
+        <link rel="stylesheet" href="{{url_for('static', filename= 'main.css') }}" />
     
-        
       </head>
       <body>
-
         <div class="container-nav">
             <!-- Left Side: Menu Icon -->
-            <div class="menu-bar">
-              <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
+            <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
               <div class="dropdown" id="dropdownMenu">
-                  <a href="signup.html" class="menu-item">Sign Up</a>
-                  <a href="login.html" class="menu-item">Log In</a>
+                  <a href="signup.html" class="menu-item">Reserve a Bed</a>
+                  <a href="login.html" class="menu-item">Biiling/ Payment</a>
+                  <a href="login.html" class="menu-item">Privacy Policy</a>
+                  <a href="login.html" class="menu-item">About Us</a>
+                  <a href="webscreen.html" class="menu-item">Log Out</a>
               </div>
-          </div>
         
             <!-- Center: Title and Subtitle -->
             <div class="title-section">
-              <h1><a href="webscreen.html">Dwell-o</a>
+                <h1><a href="userscreen.html">Dwell-o</a>
                 <p>A Better Way to Dwell</p>
-            </div> 
+            </div>
         
             <!-- Right Side: Action Buttons -->
-            <!-- <div class="actions">
+            <div class="actions">
                 <div class="availability">2 Bed Availability</div>
-                <div class="calendar">&#128197;</div>
-                <div class="notification">&#128276;</div> 
-                <button class="share-idea">+ Share your idea</button>
-                <div class="profile-circle">&#128100;</div>
-            </div> -->
+                <div class="calendar">&#128197;</div> <!-- Unicode for calendar icon -->
+                <!-- Notification content that appears on bell click -->
+                    <div class="notification" onclick="toggleNotification()">&#128276;</div>
+
+                    <div class="notification-content" id="notificationContent">
+                      <div class="notification-item">Notification 1</div>
+                      <div class="notification-item">Notification 2</div>
+                      <div class="notification-item">Notification 3</div>
+                    </div>
+                    
+                    <button class="share-idea" data-toggle="modal" data-target="#messageModal">
+                        + Share your idea
+                    </button>
+                <!-- Bootstrap Modal for Sharing Idea -->
+                <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="messageModalLabel">Share Your Idea</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <textarea placeholder="Write your idea here..." rows="4" class="form-control"></textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Submit Idea</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+                <div class="profile-circle">MJ</div>
+            </div>
         </div>
 
-            <!-- Login Section -->
-    <div class="login-section">
-        <div class="login-box">
-          <h1>Dwell-o</h1>
-          <p>A Better Way to Dwell</p>
-  
-          <form>
-            <input type="text" placeholder="Username" required>
-            <input type="password" placeholder="Enter at least 8+ characters" required>
-            <a href="#" class="forgot-password">Forgot password?</a>
-            <a href="userscreen.html" class="login-button" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: white; text-align: center; text-decoration: none; border-radius: 5px;">Log In</a>
-
-
-          </form>
-  
-          <p class="signup-text">
-            Don't have an account? <a href="signup.html">Sign Up Now</a>
-          </p>
-        </div>
-      </div>
-  
-      <!-- Availability Section -->
-      <!-- <div class="availability-section">
-        <input type="text" placeholder="2 Bed Availability">
-         <button><img src="calendar-icon.png" alt="calendar"></button> -->
-      <!-- </div>  -->
+        <!-- Main Content -->
+        <main class="content">
+            <div class="image-gallery">
+                <div class="image-placeholder"></div>
+                <div class="image-placeholder"></div>
+                <div class="image-placeholder"></div>
+                <div class="image-placeholder"></div>
+            </div>
+            <div class="review-section">
+                <div class="review-card"></div>
+                <div class="review-card"></div>
+                <div class="review-card"></div>
+                <div class="review-card"></div>
+            </div>
+        </main>
     
     
        <!-- Footer -->
@@ -143,17 +160,10 @@
         </div>
     </footer>
     
-    
-    
-        <script src="main.js"></script>
+        <script src="{{url_for('static', filename= 'main.js') }}"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     
-
-
-
-
-
 </body>
 </html>

@@ -3,10 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dwell-o</title>
-    
+    <!-- FEEDBACK/SATISFACTOR THIS HTML-->
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     
         <link
@@ -19,7 +17,7 @@
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         />
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="prreconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     
         <!-- ICONSCOUT CDN -->
@@ -44,90 +42,64 @@
           rel="stylesheet"
         />
     
-        <link rel="stylesheet" href="main.css" />
+        <link rel="stylesheet" href="{{url_for('static', filename= 'main.css') }}" />
     
         
-      </head>
-      <body>
+    </head>
+    <body>
 
         <div class="container-nav">
             <!-- Left Side: Menu Icon -->
             <div class="menu-bar">
-              <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
-              <div class="dropdown" id="dropdownMenu">
-                  <a href="signup.html" class="menu-item">Sign Up</a>
-                  <a href="login.html" class="menu-item">Log In</a>
-              </div>
-          </div>
+                <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
+                <div class="dropdown" id="dropdownMenu">
+                    <a href="signup.html" class="menu-item">Sign Up</a>
+                    <a href="login.html" class="menu-item">Log In</a>
+                </div>
+            </div>
         
             <!-- Center: Title and Subtitle -->
             <div class="title-section">
-                <h1>Dwell-o</h1>
+                <h1><a href="main.html">Dwell-o</a>
                 <p>A Better Way to Dwell</p>
             </div>
         
             <!-- Right Side: Action Buttons -->
-            <div class="actions">
+            <!-- <div class="actions">
                 <div class="availability">2 Bed Availability</div>
-                <div class="calendar">&#128197;</div> <!-- Unicode for calendar icon -->
-                <div class="notification">&#128276;</div> <!-- Unicode for bell icon -->
-                <button class="share-idea">+ Share your idea</button>
-                <div class="profile-circle">MJ</div>
+                <button class="share-idea"> -->
+                    <!-- Pakiayos itsura -->
+                    <!-- <div class="notification">&#128276;</div> Unicode for bell icon -->
+                        <!-- Share your idea button with modal trigger -->
+                        <!-- <button class="share-idea" data-toggle="modal" data-target="#messageModal">
+                            + Share your idea
+                        </button>
+                        <div class="calendar">&#128197;</div> Unicode for calendar icon -->
+                <!-- <div class="profile-circle">MJ</div> -->
+
+
+
+
             </div>
         </div>
 
-        <div class="container">
-            <header class="logo">
-              <img src="logo.png" alt="Logo">
-            </header>
-        
-            <div class="form-container">
-              <div class="form-header">
-                <h2>Personal Information</h2>
-                <h2>Sign Up Form</h2>
-              </div>
-        
-              <div class="form-body">
-                <div class="left-form">
-                  <div class="input-group">
-                    <span class="icon">👤</span>
-                    <input type="text" placeholder="First Name">
-                  </div>
-                  <div class="input-group">
-                    <span class="icon">👤</span>
-                    <input type="text" placeholder="Last Name">
-                  </div>
-                  <div class="input-group">
-                    <span class="icon">✉️</span>
-                    <input type="email" placeholder="Email Address">
-                  </div>
-                  <div class="input-group">
-                    <span class="icon">📞</span>
-                    <input type="text" placeholder="Contact Number">
-                  </div>
-                </div>
-        
-                <div class="right-form">
-                  <div class="input-group">
-                    <span class="icon">👥</span>
-                    <input type="text" placeholder="Create Username">
-                  </div>
-                  <div class="input-group password-group">
-                    <span class="icon">🔒</span>
-                    <input type="password" placeholder="Enter at least 8+ characters">
-                    <button type="button" class="toggle-password">👁️</button>
-                  </div>
-                </div>
-              </div>
-        
-              <div class="form-footer">
-                <a href="login.html" class="submit-button" style="display: inline-block; padding: 10px 20px; background-color: #28a745; color: white; text-align: center; text-decoration: none; border-radius: 5px;">Create Account</a>
+        <div class="reviews-container">
+            <!-- Top Image Gallery -->
+            <div class="image-gallery">
+                <div class="image-placeholder"></div>
+                <div class="image-placeholder"></div>
+                <div class="image-placeholder"></div>
+                <div class="image-placeholder"></div>
             </div>
-            
-            </div>
-          </div>
+        
+        
+            <!-- Message Icon -->
+            <div class="message-icon">✉️</div>
+        </div>
     
-    
+
+
+
        <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -169,7 +141,7 @@
     
     
     
-        <script src="main.js"></script>
+        <script src="{{url_for('static', filename= 'main.js') }}"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
