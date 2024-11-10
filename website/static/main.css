@@ -874,3 +874,55 @@
     border-radius: 5px;
     z-index: 1000;
 }
+
+
+
+/* Left Sidebar */
+.left-sidebar {
+    width: 350px; /* Adjust width based on sidebar size */
+    background-color: #f4f4f4;
+    padding: 10px;
+    height: 80vh; /* Full height of the viewport */
+    overflow-y: auto; /* Allows scrolling if content overflows */
+    float: left; /* Makes the sidebar float to the left */
+}
+
+/* Sidebar Rectangles */
+.rectangle {
+    width: 100%; /* Full width of the sidebar */
+    height: 60px; /* Rectangle height */
+    background-color: #ddd;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Content Viewer beside Sidebar */
+.content-viewer {
+    margin-left: 210px; /* Space between sidebar and content viewer */
+    padding: 20px;
+    background-color: #ffffff;
+    height: 80vh; /* Same height as the sidebar */
+    overflow-y: auto; /* Allows scrolling if content is too long */
+    display: block; /* Ensures it's positioned beside the sidebar */
+}
+
+/* Content Styling */
+.viewer-content {
+    font-family: Arial, sans-serif;
+    color: #333;
+    font-size: 16px;
+    display: none; /* Hide by default */
+}
+
+/* Show active content */
+.viewer-content.active {
+    display: block; /* Show content when active */
+}
+
