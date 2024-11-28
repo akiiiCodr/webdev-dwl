@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dwell-o</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- Google Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <!-- Google Fonts (Bebas Neue) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Iconscout CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/solid.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css"
+    />
+
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts (Montserrat) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='main.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container-nav">
+      <!-- Left Side: Menu Icon -->
+      <div class="menu-bar">
+        <button
+          class="menu-button"
+          onclick="toggleMenu()"
+          aria-label="Toggle navigation menu"
+        >
+          &#9776;
+        </button>
+        <div class="dropdown" id="dropdownMenu"></div>
+      </div>
+
+      <!-- Center: Title and Subtitle -->
+      <div class="title-section">
+        <h1><a href="{{ url_for('home') }}">Dwell-o</a></h1>
+        <p>A Better Way to Dwell</p>
+      </div>
+
+      <!-- Right Side: Actions (Bed Availability, Calendar) -->
+      <div class="right-header">
+        <!-- Actions (Bed Availability, Calendar) -->
+        <div class="header-actions">
+          <!-- Bed Availability Box -->
+          <div class="availability-box">
+            <i class="fa fa-user"></i>
+            <!-- Person Icon -->
+            <div class="availability-text">2 Bed Availability</div>
+          </div>
+
+          <!-- Calendar Box with Date -->
+          <div class="calendar-box">
+            <div class="calendar-icon">&#128197;</div>
+            <!-- Calendar Icon -->
+            <div class="date-text">
+              <span id="current-date"></span>
+              <!-- Current date will be displayed here -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Login & Sign Up -->
+      <div class="auth-buttons">
+        <a href="{{ url_for('signup') }}" class="menu-item">Sign Up</a>
+        <a href="{{ url_for('login') }}" class="menu-item">Log In</a>
+      </div>
+    </div>
+
+    <div class="reviews-container">
+      <!-- Top Image Gallery -->
+      <div class="image-gallery">
+        <div class="image-placeholder"></div>
+        <div class="image-placeholder"></div>
+        <div class="image-placeholder"></div>
+        <div class="image-placeholder"></div>
+      </div>
+
+      <!-- Message Icon -->
+      <div class="message-icon" aria-label="Messages">✉️</div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <!-- About Section -->
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias
+            laudantium commodi, nostrum, qui officiis consequuntur dignissimos
+            corporis delectus ullam ad dolorum id quam fuga porro et! Error
+            consequatur soluta reiciendis.
+          </p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook">F</a>
+            <a href="#" aria-label="Twitter">T</a>
+            <a href="#" aria-label="Instagram">I</a>
+            <a href="#" aria-label="LinkedIn">L</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">© 2024 Dwell-o. All rights reserved.</div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
